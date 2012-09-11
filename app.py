@@ -23,7 +23,7 @@ def getstates():
             default = json_util.default,
             indent=4))
     else:
-        states = db.states.find()
+        states = db.states.find({}, { '_id': False })
         return str(json.dumps({'results' : list(states)}, 
             default = json_util.default,
             indent=4))
@@ -32,12 +32,12 @@ def getstates():
 def getstate(statename):
     try:
         if len(statename) == 2:
-            state = db.states.find({'info.abbr': statename})
+            state = db.states.find({'info.abbr': statename.upper()}, { '_id': False })
             return str(json.dumps({'results': list(state)},
                 default = json_util.default,
                 indent=4))
         else:
-            state = db.states.find({'name': statename})
+            state = db.states.find({'name': statename.title()}, { '_id': False })
             return str(json.dumps({'results': list(state)},
                 default = json_util.default,
                 indent=4))
