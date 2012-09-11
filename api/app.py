@@ -20,7 +20,7 @@ except:
     print('Error: Unable to connect to database.')
     connection = None
 
-states = db.states
+#states = db.states
 
 @app.route("/states")
 def getstates():
