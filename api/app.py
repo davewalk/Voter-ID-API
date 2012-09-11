@@ -1,5 +1,6 @@
 import sys
 import json
+import settings
 from flask import Flask
 from flask import request
 from pymongo import Connection
@@ -9,16 +10,18 @@ from copy import deepcopy
 app = Flask(__name__)
 
 # Heroku/MongoDB Details
-mongodb_uri = 'mongodb://localhost:27017'
-db_name = 'voteridapi'
+conn = connect(settings.DB, host=settings.DB_HOST, port=settings.DB_PORT,
+        username=settings.DB_USER, password=settings.DB_PASS)
+db = conn[settings.DB]
+db.authenticate(settings.DB_USER, settings.DB_PASS)
 
-try:
-    connection = pymongo.Connection(mongodb_uri)
-    db = connection[db_name]
+#try:
+#    connection = pymongo.Connection(mongodb_uri)
+#    db = connection[db_name]
     #states = db.states
-except:
-    print('Error: Unable to connect to database.')
-    connection = None
+#except:
+#    print('Error: Unable to connect to database.')
+#    connection = None
 
 #states = db.states
 
