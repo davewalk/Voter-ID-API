@@ -1,20 +1,20 @@
 """ 
 Imports the Voter ID .csv file into a MongoDB database.
 """
-
+import os
+from urlparse import urlparse
 import csv
 import sys
+import settings
 from pymongo import Connection
 
 DELIMITER = ','
 
-# MongoDB Details
-conn = Connection()
-db = conn['voterapi']
+MONGO_URL = os.environ['MONGOHQ_URL']
+conn = Connection(MONGO_URL)
+db = conn[urlparse(MONGO_URL).path[1:]]
 
 db.states.drop()
-
-states = db.states # The collection
 
 class NestedDict(dict):
     def __getitem__(self, item):
@@ -33,8 +33,6 @@ if __name__ == "__main__":
                 data = csv.reader(file, delimiter=DELIMITER)
                 headers = next(data)[1:]
 
-                #print headers
-                
                 for row in data:
                     state = NestedDict()
 

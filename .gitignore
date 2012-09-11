@@ -3,3 +3,4 @@ venv
 api/jsonp.py
 *.swp
 api/settings.py
+.env
