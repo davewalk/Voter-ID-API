@@ -1,7 +1,6 @@
 import os
 import sys
 import json
-import settings
 from flask import Flask
 from flask import request
 from pymongo import Connection
