@@ -8,15 +8,15 @@ Endpoints
 
 More to come, but for now:
 
-### /states
+### api.voterid2012.org/states
 
 Returns all data for all states.
 
-### /states/{statename or state abbr}
+### api.voterid2012.org/states/{state name | state abbr}
 
 Pass a state's name or two-letter abbreviation to get only data for that state.
 
-### /states?require={id | photo | strict}
+### api.voterid2012.org/states?require={id | photo | strict}
 
 Returns the state's that require the parameter passed.  See above for definitions (coming soon).
 
