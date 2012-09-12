@@ -16,7 +16,7 @@ db = conn[urlparse(MONGO_URL).path[1:]]
 
 @app.route("/states")
 def getstates():
-    filter = request.args.get('required', '')
+    filter = request.args.get('require', '')
     if (filter):
         states = db.states.find({'vote.' + filter: True}, { '_id': False })
         return str(json.dumps({'results': list(states)},
