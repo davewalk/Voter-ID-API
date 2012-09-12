@@ -20,6 +20,10 @@ Pass a state's name or two-letter abbreviation to get only data for that state.
 
 Returns the state's that require the parameter passed.  See above for definitions (coming soon).
 
+JSONP is supported:
+
+### api.voterid2012.org/states?callback={callback}
+
 About
 =====
 
