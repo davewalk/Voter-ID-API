@@ -16,7 +16,7 @@ Here is a breakdown of the data that this API currently serves up.
 * **Strict**: According to the NCSL website, strict means that "a voter cannot cast a ballot without first presenting ID."
 * **Non-Strict**: Without an ID, voters "may be permitted to sign an affidavit of identity, or poll workers may be able to vouch for them personally."
 
-The `REG_LINK` field includes the URL to the specific voter ID requirements for each state from the awesome [Cost of Freedom app](http://www.costoffreedom.info)
+The `reg_link` field includes the URL to the specific voter ID requirements for each state from the awesome [Cost of Freedom app](http://www.costoffreedom.info)
 
 [Want to help add new data?](#want-to-help)
 
@@ -35,7 +35,7 @@ Pass a state's name or two-letter abbreviation to get only data for that state.
 
 ### api.voterid2012.org/states?require={id | photo | strict}
 
-Returns the state's that require the parameter passed.  See above for definitions (coming soon).
+Returns the state's that require the parameter passed.
 
 JSONP is supported:
 
