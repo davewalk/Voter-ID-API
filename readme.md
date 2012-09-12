@@ -32,11 +32,11 @@ Whew, glad you're here, this project could use a lot of help!
 ### 1. More data 
 More data is the top priority as what is available here is only intended as a start.  Here are few things that I think would be good to include:
 
-* Date of voter id change.  This is vital, but requires some research.  I haven't been able to find one source that compiled this information in an easy format.  I think it's also open to discussion on what this date should pertain to
-* Current and past governors party affiliation per state
-* Current and past state senate majority party per state
-* Past Presidential results per state (2000-2008?)
-* Whatever else folks find useful!
+* **Date of voter id change**.  This is vital, but requires some research.  I haven't been able to find one source that compiled this information in an easy format.  I think it's also open to discussion on what this date should pertain to
+* **Current and past governors party affiliation per state**
+* **Current and past state senate majority party per state**
+* **Past Presidential results per state (2000-2008?)**
+* **Whatever else folks find useful!**
 
 ### 2. Feedback
 Is this API useful to developers?  Can it be improved?  Is there something that should be included?
@@ -45,7 +45,7 @@ Is this API useful to developers?  Can it be improved?  Is there something that 
 A face that communicates what the API is better than a Github readme would be awesome
 
 ### 4. A Logo
-Because I stink a Photoshop
+Because I'm awful with Photoshop.
 
 If you would like to help, please email or tweet below or come out to the [Hacks for Democracy]("http://www.azavea.com/a/hacks-for-democracy" "Hacks for Democracy hackathon") hackathon!  Thx!
 
