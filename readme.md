@@ -1,7 +1,7 @@
 Voter ID API
 ============
 
-This is a simple Voter ID API to be used by hackathons preceding and right after the 2012 U.S. Presidential Election.  More details coming soon!
+This is a simple Voter ID API to be used by developers around the 2012 U.S. Presidential Election.  It provides data on applicable voter ID laws to the 2012 general election at the state level.  This data can be useful for visualizing and analyzing the impact of new voter id laws before and after the election.
 
 Data
 ====
