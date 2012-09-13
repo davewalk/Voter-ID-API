@@ -17,7 +17,7 @@ db = conn[urlparse(MONGO_URL).path[1:]]
 def getstates():
     filter = request.args.get('require', '')
     if (filter):
-        if filter not in ('strict', 'id', 'photo') :
+        if filter not in ('strict', 'id', 'photo'):
             message = ('%s is not a valid require value.  Use either strict, '
                 'photo or id.' % filter)
             return helpers.bad_request_response(message)
@@ -32,12 +32,15 @@ def getstates():
 @app.route("/states/<statename>")
 @helpers.jsonp
 def getstate(statename):
-    if len(statename) > 14:
-        message = 'Too many characters to be a state name.'
-        return helpers.bad_request_response(message)    
-    elif len(statename) == 2:
+
+    state_length = range(4, 15)
+
+    if len(statename) == 2:
         state = db.states.find({'info.abbr': statename.upper()}, { '_id': False })
         return helpers.wrap_response(state)
+    elif len(statename) not in state_length:
+        message = 'That is not a recognizable value for a state.'
+        return helpers.bad_request_response(message)
     else:
         state = db.states.find({'name': statename.title()}, { '_id': False })
         return helpers.wrap_response(state)

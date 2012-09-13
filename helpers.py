@@ -24,8 +24,9 @@ def wrap_response(states):
     return response
 
 def bad_request_response(message):
-    data = str(json.dumps({'id': '400 Bad Request',
-                           'message': '400 Bad Request: ' + message},
+    data = str(json.dumps({'error': 
+                            {'id': '400 Bad Request',
+                             'message': '400 Bad Request: ' + message}},
         default = json_util.default,
         indent = 4))
     response = Response(data, status=400, mimetype='application/json')
