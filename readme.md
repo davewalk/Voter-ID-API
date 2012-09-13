@@ -67,11 +67,11 @@ Returns all data for all states:
 
 ### api.voterid2012.org/states/{state name | state abbr}
 
-Pass a state's name or two-letter abbreviation to get only data for that state.
+Pass a state's name or two-letter abbreviation to get only that state's data.
 
 ### api.voterid2012.org/states?require={id | photo | strict}
 
-Returns the state's that require the parameter passed.
+Returns the states that require the parameter passed.
 
 JSONP is supported:
 
@@ -95,12 +95,17 @@ More data is the top priority as what is available here is only intended as a st
 Is this API useful to developers?  Can it be improved?  Is there something that should be included?
 
 ### 3. A Website
-A face that communicates what the API is better than a Github readme would be awesome
+A public face that communicates what the API is better than a Github readme would be awesome
 
 ### 4. A Logo
 Because I'm awful with Photoshop.
 
 If you would like to help, please email or tweet below or come out to the [Hacks for Democracy](http://www.azavea.com/a/hacks-for-democracy "Hacks for Democracy hackathon") hackathon!  Thx!
+
+Applications
+============
+
+Does your application use this API?  Get in touch or submit a pull request to add it here!
 
 More info
 =========
