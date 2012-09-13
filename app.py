@@ -17,8 +17,13 @@ db = conn[urlparse(MONGO_URL).path[1:]]
 def getstates():
     filter = request.args.get('require', '')
     if (filter):
-        states = db.states.find({'vote.' + filter: True}, { '_id': False })
-        return helpers.wrap_response(states)
+        if filter not in ('strict', 'id', 'photo') :
+            message = ('%s is not a valid require value.  Use either strict, '
+                'photo or id.' % filter)
+            return helpers.bad_request_response(message)
+        else:
+            states = db.states.find({'vote.' + filter: True}, { '_id': False })
+            return helpers.wrap_response(states)
 
     else:
         states = db.states.find({}, { '_id' : False })
