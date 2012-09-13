@@ -31,11 +31,11 @@ More to come, but for now:
 
 Returns all data for all states:
 
-`"Results": [
-    {
-        "info": {
-            "pop2011": 4802740,
-            "capital": "Montgomery",
+`"Results": [  
+    {  
+        "info": {  
+            "pop2011": 4802740,  
+            "capital": "Montgomery",  
             "votes": 9,
             "abbr": "AL
             "},
