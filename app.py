@@ -27,7 +27,10 @@ def getstates():
 @app.route("/states/<statename>")
 @helpers.jsonp
 def getstate(statename):
-    if len(statename) == 2:
+    if len(statename) > 14:
+        message = 'Too many characters to be a state name.'
+        return helpers.bad_request_response(message)    
+    elif len(statename) == 2:
         state = db.states.find({'info.abbr': statename.upper()}, { '_id': False })
         return helpers.wrap_response(state)
     else:

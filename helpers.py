@@ -22,3 +22,12 @@ def wrap_response(states):
     response = Response(data, status=200, mimetype='application/json')
     response.headers['Access-Control-Allow-Origin'] = '*'
     return response
+
+def bad_request_response(message):
+    data = str(json.dumps({'id': '400 Bad Request',
+                           'message': '400 Bad Request: ' + message},
+        default = json_util.default,
+        indent = 4))
+    response = Response(data, status=400, mimetype='application/json')
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return response
