@@ -25,7 +25,7 @@ The `reg_link` field includes the URL to the specific voter ID requirements for 
 Endpoints
 =========
 
-More to come, but for now:
+More to come, but here are the current endpoints.  Each responds to GET requests only with JSON.
 
 ### api.voterid2012.org/states
 
