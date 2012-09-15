@@ -49,7 +49,7 @@ Returns all data for all states:
                 "name": "Alabama"
             },
             {
-                "info": {"
+                "info": {
                     "pop2011": 722718,
                     "capital": "Juneau",
                     "votes": 3,
